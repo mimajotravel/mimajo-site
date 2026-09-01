@@ -76,6 +76,25 @@ collections:
       - { label: "Feature on homepage & Magazine top?", name: "featured", widget: "boolean", default: false }
       - { label: "Article Body", name: "body", widget: "markdown" }
 
+  - name: "flash"
+    label: "Flash (Weekly Picks)"
+    folder: "content/flash"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Deal Title", name: "title", widget: "string" }
+      - { label: "Cover Photo", name: "image", widget: "image" }
+      - { label: "Location line", name: "meta", widget: "string", hint: "e.g. All-inclusive · Voyager tier price" }
+      - { label: "Original Price", name: "was_price", widget: "string" }
+      - { label: "Member Price", name: "price", widget: "string" }
+      - label: "Minimum Tier Required"
+        name: "tier_required"
+        widget: "select"
+        options: ["Voyager", "Globetrotter"]
+      - { label: "Booking / Affiliate Link", name: "cta_link", widget: "string" }
+      - { label: "Week Of", name: "week_of", widget: "datetime", hint: "The Monday this pick goes live" }
+      - { label: "Full Details", name: "body", widget: "markdown", required: false }
+
   - name: "pages"
     label: "Pages"
     files:
