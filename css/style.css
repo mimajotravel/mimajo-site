@@ -275,6 +275,57 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
   text-decoration: none;
 }
 
+/* ---------- Flash (premium weekly picks) ---------- */
+.flash-hero {
+  background: var(--ocean-grad);
+  padding: 56px 24px 80px;
+}
+.flash-hero .hero-inner h1 { font-size: clamp(2rem, 4vw, 2.8rem); }
+.flash-band {
+  background: var(--mi-soft);
+  border: 1px solid var(--mi);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  max-width: var(--maxw);
+  margin: 32px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.flash-band p { margin: 0; color: var(--ink); font-size: 0.95rem; }
+.flash-band strong { color: var(--mi); }
+.flash-card { position: relative; }
+.flash-tier-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--jo);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  z-index: 2;
+}
+.flash-price-locked {
+  filter: blur(5px);
+  user-select: none;
+}
+.btn-unlock {
+  background: var(--mi);
+  color: #fff;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
 /* ---------- Magazine tags & article ---------- */
 .mag-tag {
   display: inline-block;
