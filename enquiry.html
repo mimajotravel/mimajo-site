@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enquire — Mimajo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="images/brand/favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="images/brand/apple-touch-icon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="logo"><img src="images/brand/mimajo-lockup-horizontal.png" alt="Mimajo" class="logo-lockup"></a>
+    <ul class="nav-links">
+      <li><a href="deals.html">Deals</a></li>
+      <li><a href="magazine.html">Magazine</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li><a href="enquiry.html">Enquire</a></li>
+    </ul>
+    <a href="membership.html" class="nav-cta">Join Free</a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+  </nav>
+</header>
+
+<section class="section" style="padding-top:48px">
+  <div class="section-head" style="justify-content:center; text-align:center; flex-direction:column; align-items:center;">
+    <h2 style="color:var(--coral)">Tell us what you're after</h2>
+    <p>Destination, dates, budget — we'll hunt down a deal and email it to you.</p>
+  </div>
+
+  <!--
+    Netlify-style form handling shown here for zero-cost form capture.
+    If hosting on Vercel instead, swap this for a simple fetch() to
+    Formspree, Getform, or a Vercel serverless function — see the
+    founder roadmap doc for setup steps.
+  -->
+  <form class="form-card" name="enquiry" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="enquiry">
+    <div class="form-row">
+      <label for="name">Full name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-row">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-row">
+      <label for="destination">Destination</label>
+      <input type="text" id="destination" name="destination" placeholder="e.g. Bali, Tokyo, anywhere in Japan">
+    </div>
+    <div class="form-row">
+      <label for="dates">Travel dates</label>
+      <input type="text" id="dates" name="dates" placeholder="e.g. Dec 10–17, or flexible">
+    </div>
+    <div class="form-row">
+      <label for="budget">Budget per person</label>
+      <input type="text" id="budget" name="budget" placeholder="e.g. under $600">
+    </div>
+    <div class="form-row">
+      <label for="notes">Anything else we should know?</label>
+      <textarea id="notes" name="notes" rows="4"></textarea>
+    </div>
+    <button type="submit" class="btn-submit">Send Enquiry</button>
+  </form>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-bottom">© 2026 Mimajo.</div>
+</footer>
+
+</body>
+</html>
