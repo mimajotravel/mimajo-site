@@ -1,0 +1,64 @@
+backend:
+  name: github
+  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME   # <-- change this
+  branch: main
+  # Decap CMS needs an OAuth client to log you into GitHub.
+  # Easiest zero-cost route: deploy this same site to Netlify (free tier)
+  # just for its built-in "Git Gateway" identity/auth service, OR
+  # run the small decap-cms-github-oauth-provider on Vercel (free).
+  # See the founder roadmap doc, Phase 3, for the exact steps.
+
+media_folder: "images/uploads"   # where uploaded photos are saved in the repo
+public_folder: "/images/uploads" # how those photos are referenced on the live site
+
+publish_mode: editorial_workflow  # gives you a draft -> review -> publish flow
+
+collections:
+  - name: "deals"
+    label: "Deals"
+    folder: "content/deals"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Deal Title", name: "title", widget: "string" }
+      - { label: "Cover Photo", name: "image", widget: "image" }
+      - label: "Category Tag"
+        name: "tag"
+        widget: "select"
+        options: ["Hotel", "Flight", "Flight + Hotel", "Package", "Flash Sale", "Members Only"]
+      - { label: "Location line", name: "meta", widget: "string", hint: "e.g. Uluwatu · Includes airport transfer" }
+      - { label: "Original Price", name: "was_price", widget: "string" }
+      - { label: "Deal Price", name: "price", widget: "string" }
+      - { label: "Booking / Affiliate Link", name: "cta_link", widget: "string" }
+      - { label: "Featured on homepage?", name: "featured", widget: "boolean", default: false }
+      - { label: "Expiry Date", name: "expires", widget: "datetime", required: false }
+      - { label: "Full Details", name: "body", widget: "markdown" }
+
+  - name: "magazine"
+    label: "Magazine"
+    folder: "content/magazine"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Article Title", name: "title", widget: "string" }
+      - { label: "Cover Photo", name: "image", widget: "image" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["Destination Guide", "Budget Tips", "Travel Hacks", "Packing"]
+      - { label: "Excerpt", name: "excerpt", widget: "text", hint: "1-2 sentences shown on the Magazine listing page" }
+      - { label: "Author", name: "author", widget: "string", default: "The Mimajo Team" }
+      - { label: "Read Time (minutes)", name: "read_time", widget: "number", value_type: "int", min: 1, max: 30 }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Feature on homepage & Magazine top?", name: "featured", widget: "boolean", default: false }
+      - { label: "Article Body", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Membership Page Copy"
+        name: "membership"
+        file: "content/pages/membership.md"
+        fields:
+          - { label: "Intro Heading", name: "heading", widget: "string" }
+          - { label: "Intro Text", name: "intro", widget: "text" }
