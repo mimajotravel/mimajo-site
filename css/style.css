@@ -129,6 +129,27 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
 }
 .nav-toggle { display: none; background: none; border: none; font-size: 1.6rem; cursor: pointer; color: var(--mi); }
 
+/* ---------- Flash nav badge ---------- */
+.nav-flash {
+  background: linear-gradient(120deg, var(--mi), var(--ma));
+  color: #fff !important;
+  padding: 7px 14px !important;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 700 !important;
+  animation: flash-pulse 2.4s ease-in-out infinite;
+}
+.nav-flash:hover { color: #fff !important; filter: brightness(1.08); }
+@keyframes flash-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 79, 129, 0.45); }
+  50% { box-shadow: 0 0 0 7px rgba(255, 79, 129, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-flash { animation: none; }
+}
+
 /* ---------- Hero ---------- */
 .hero {
   background: var(--sunrise-grad);
@@ -280,7 +301,18 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
   background: var(--ocean-grad);
   padding: 56px 24px 80px;
 }
-.flash-hero .hero-inner h1 { font-size: clamp(2rem, 4vw, 2.8rem); }
+.flash-hero .hero-inner h1 {
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  max-width: 20ch;
+  margin: 0 auto 16px;
+  text-shadow: 0 4px 18px rgba(0,0,0,0.15);
+}
+.flash-hero .hero-inner p {
+  color: #E4FBF9;
+  max-width: 48ch;
+  margin: 0 auto;
+}
 .flash-band {
   background: var(--mi-soft);
   border: 1px solid var(--mi);
