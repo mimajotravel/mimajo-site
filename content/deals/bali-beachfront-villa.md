@@ -1,6 +1,6 @@
 ---
 title: "Bali: 4-Night Beachfront Villa + Breakfast"
-image: "/images/uploads/bali-villa.jpg"
+image: "https://images.unsplash.com/photo-1573790387438-4da905039392"
 tag: "Hotel"
 meta: "Uluwatu · Includes airport transfer"
 was_price: "$620"

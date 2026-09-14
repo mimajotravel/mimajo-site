@@ -1,6 +1,6 @@
 ---
 title: "Tokyo: 5D4N Fly-Stay Package"
-image: "/images/uploads/tokyo-package.jpg"
+image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf"
 tag: "Flight + Hotel"
 meta: "Shinjuku · Direct flights from Singapore"
 was_price: "$1,150"

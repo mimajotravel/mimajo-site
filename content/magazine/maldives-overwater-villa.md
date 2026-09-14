@@ -1,12 +1,12 @@
 ---
 title: "How We Booked a Maldives Overwater Villa for Under $700"
-image: "/images/uploads/maldives-villa.jpg"
+image: "https://images.unsplash.com/photo-1544644181-1484b3fdfc62"
 category: "Budget Tips"
 excerpt: "Shoulder season, a local island instead of a resort island, and one email — here's exactly how the price came down."
 author: "The Mimajo Team"
 read_time: 5
 date: 2026-08-15T00:00:00.000Z
-featured: false
+featured: true
 ---
 
 Overwater villas usually start at $1,000+ a night. We paid $689 for three nights — here's what actually moved the price.

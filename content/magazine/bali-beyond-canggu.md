@@ -1,6 +1,6 @@
 ---
 title: "Bali Beyond Canggu: 5 Quiet Towns That Still Feel Like a Deal"
-image: "/images/uploads/bali-quiet-towns.jpg"
+image: "https://images.unsplash.com/photo-1509233725247-49e657c54213"
 category: "Budget Tips"
 excerpt: "Canggu's prices have caught up to its popularity. These five towns haven't — yet."
 author: "The Mimajo Team"

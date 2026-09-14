@@ -1,12 +1,12 @@
 ---
 title: "7 Things We Always Do Before a Flight to Save Money"
-image: "/images/uploads/flight-hacks.jpg"
+image: "https://images.unsplash.com/photo-1503220317375-aaad61436b1b"
 category: "Travel Hacks"
 excerpt: "Small habits that consistently shave dollars off a booking, in the order we actually do them."
 author: "The Mimajo Team"
 read_time: 4
 date: 2026-08-10T00:00:00.000Z
-featured: false
+featured: true
 ---
 
 None of these are secret tricks — just a checklist we run every time, in order.

@@ -1,6 +1,6 @@
 ---
 title: "Seoul on a Shoestring: A 3-Day Neighbourhood-by-Neighbourhood Plan"
-image: "/images/uploads/seoul-neighbourhood.jpg"
+image: "https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3"
 category: "Destination Guide"
 excerpt: "Three days, three neighbourhoods, minimal transit backtracking — and a lot of $6 meals."
 author: "The Mimajo Team"

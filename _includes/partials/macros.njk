@@ -1,0 +1,43 @@
+{% macro dealCard(deal) %}
+<article class="deal-card">
+  <img src="{{ deal.image }}?w=500" alt="{{ deal.title }}">
+  <div class="deal-body">
+    <span class="deal-tag">{{ deal.tag }}</span>
+    <h3>{{ deal.title }}</h3>
+    <p class="deal-meta">{{ deal.meta }}</p>
+    <div class="deal-price-row">
+      <div class="deal-price"><span class="was">{{ deal.was_price }}</span>{{ deal.price }}</div>
+      <a href="{{ deal.cta_link }}" class="btn-book">Book Now</a>
+    </div>
+  </div>
+</article>
+{% endmacro %}
+
+{% macro magazineCard(article) %}
+<a href="/magazine-{{ article.slug }}.html" style="text-decoration:none; color:inherit;">
+  <article class="deal-card">
+    <img src="{{ article.image }}?w=500" alt="{{ article.title }}">
+    <div class="deal-body">
+      <span class="mag-tag {{ article.tagClass }}">{{ article.category }}</span>
+      <h3>{{ article.title }}</h3>
+      <p class="deal-meta">{{ article.read_time }} min read</p>
+    </div>
+  </article>
+</a>
+{% endmacro %}
+
+{% macro flashCard(deal) %}
+<article class="deal-card flash-card">
+  <span class="flash-tier-badge">{{ deal.tier_required }}{% if deal.tier_required != "Globetrotter" %}+{% endif %}</span>
+  <img src="{{ deal.image }}?w=500" alt="{{ deal.title }}">
+  <div class="deal-body">
+    <span class="deal-tag">Members Only</span>
+    <h3>{{ deal.title }}</h3>
+    <p class="deal-meta">{{ deal.meta }}</p>
+    <div class="deal-price-row">
+      <div class="deal-price flash-price-locked"><span class="was">{{ deal.was_price }}</span>{{ deal.price }}</div>
+      <a href="/membership.html" class="btn-unlock">Unlock</a>
+    </div>
+  </div>
+</article>
+{% endmacro %}

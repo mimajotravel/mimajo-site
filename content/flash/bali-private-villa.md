@@ -1,6 +1,6 @@
 ---
 title: "Bali: 5-Night Private Pool Villa + Butler"
-image: "/images/uploads/bali-flash.jpg"
+image: "https://images.unsplash.com/photo-1573790387438-4da905039392"
 meta: "Ubud · Full board, airport transfers included"
 was_price: "$3,100"
 price: "$1,980"

@@ -1,6 +1,6 @@
 ---
 title: "Seoul: Return Flights on Full-Service Carrier"
-image: "/images/uploads/seoul-flights.jpg"
+image: "https://images.unsplash.com/photo-1508964942454-1a56651d54ac"
 tag: "Flight"
 meta: "Incheon · Valid for travel Oct–Dec"
 was_price: "$580"

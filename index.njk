@@ -1,0 +1,109 @@
+---
+layout: layouts/base.njk
+title: "Mimajo — Asia's Best Travel Deals, Verified Daily"
+description: "Hand-checked flight, hotel and package deals across Asia. New drops every morning."
+---
+{% from "partials/macros.njk" import dealCard, magazineCard %}
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-eyebrow">New deals every morning, Singapore time</span>
+    <h1>Asia's best travel deals, checked by a human before sunrise</h1>
+    <p>Flights, hotels and getaway packages — vetted daily so you never overpay for a trip again.</p>
+    <form class="hero-search" action="/deals.html" method="get">
+      <input type="text" name="q" placeholder="Try 'Bali under $400' or 'Tokyo hotel deal'">
+      <button type="submit">Find a Deal</button>
+    </form>
+  </div>
+</section>
+
+<section class="section" style="padding-bottom:0;">
+  <a href="/flash.html" style="text-decoration:none; display:block; max-width:var(--maxw); margin:0 auto;">
+    <div style="background:var(--ocean-grad); border-radius:var(--radius); padding:32px 36px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; box-shadow:var(--shadow);">
+      <div>
+        <span style="display:inline-block; background:rgba(255,255,255,0.2); color:#fff; padding:4px 14px; border-radius:999px; font-size:0.78rem; font-weight:700; margin-bottom:10px;">⚡ NEW · Refreshed every Monday</span>
+        <h2 style="color:#fff; margin-bottom:4px; font-size:clamp(1.4rem, 3vw, 1.9rem);">This week's Flash picks</h2>
+        <p style="color:#DFF5F4; margin:0; max-width:44ch;">Our biggest discounts of the week — unlocked for Voyager and Globetrotter members.</p>
+      </div>
+      <span class="btn-book" style="background:var(--mi); font-size:0.95rem; padding:12px 24px; white-space:nowrap;">See This Week's Picks →</span>
+    </div>
+  </a>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <h2>Today's top picks</h2>
+      <p>Refreshed daily — grab them before they're gone.</p>
+    </div>
+    <a href="/deals.html" class="pill-link">See all deals →</a>
+  </div>
+  <div class="deal-grid">
+    {% for deal in deals %}
+      {% if deal.featured %}{{ dealCard(deal) }}{% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section" style="background:var(--sand-deep)">
+  <div class="section-head">
+    <div>
+      <h2>Membership, made for real travellers</h2>
+      <p>Free to browse. Upgrade for earlier access and members-only prices.</p>
+    </div>
+    <a href="/membership.html" class="pill-link">Compare tiers →</a>
+  </div>
+  <div class="tier-grid">
+    <div class="tier-card">
+      <span class="tier-name">EXPLORER</span>
+      <div class="tier-price">Free</div>
+      <ul class="tier-list">
+        <li>Daily deal alerts by email</li>
+        <li>Access to all public deals</li>
+        <li>Save deals to a wishlist</li>
+      </ul>
+      <a href="/membership.html" class="tier-cta">Join Free</a>
+    </div>
+    <div class="tier-card featured">
+      <span class="tier-name">VOYAGER</span>
+      <div class="tier-price">$4<span>/month</span></div>
+      <ul class="tier-list">
+        <li>Everything in Explorer</li>
+        <li>Full access to weekly Flash picks</li>
+        <li>24-hour early access to deals</li>
+      </ul>
+      <a href="/membership.html" class="tier-cta">Start Voyager</a>
+    </div>
+    <div class="tier-card">
+      <span class="tier-name">GLOBETROTTER</span>
+      <div class="tier-price">$12<span>/month</span></div>
+      <ul class="tier-list">
+        <li>Everything in Voyager</li>
+        <li>Top-tier exclusive Flash picks</li>
+        <li>Personal deal-hunting requests</li>
+      </ul>
+      <a href="/membership.html" class="tier-cta">Start Globetrotter</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <h2>From the Magazine</h2>
+      <p>Guides and tips to plan around your next deal.</p>
+    </div>
+    <a href="/magazine.html" class="pill-link">Read more →</a>
+  </div>
+  <div class="deal-grid">
+    {% for article in magazineArticles %}
+      {% if article.featured %}{{ magazineCard(article) }}{% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="enquiry-band">
+  <h2>Can't find the deal you're after?</h2>
+  <p>Tell us your destination, dates and budget — our team hunts down a deal and emails it to you directly.</p>
+  <a href="/enquiry.html" class="btn-outline">Send an Enquiry</a>
+</section>

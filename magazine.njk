@@ -1,0 +1,55 @@
+---
+layout: layouts/base.njk
+title: "Magazine"
+description: "Destination guides, budget tips and packing hacks from the Mimajo team."
+---
+{% from "partials/macros.njk" import magazineCard %}
+{% set featuredArticles = magazineArticles | selectattr("featured") | list %}
+{% set featured = featuredArticles[0] %}
+
+<section class="hero" style="padding:56px 24px 88px;">
+  <div class="hero-inner">
+    <span class="hero-eyebrow">The Mimajo Magazine</span>
+    <h1 style="font-size:clamp(2rem,4vw,2.9rem)">Stories, guides and tips for your next trip</h1>
+    <p>Real destination guides and budget-travel tricks from the same team that checks your deals every morning.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <h2>Featured story</h2>
+    </div>
+  </div>
+
+  {% if featured %}
+  <a href="/magazine-{{ featured.slug }}.html" style="text-decoration:none; display:block; max-width:var(--maxw); margin:0 auto 48px;">
+    <article class="deal-card" style="display:grid; grid-template-columns: 1.1fr 1fr; overflow:hidden;">
+      <img src="{{ featured.image }}?w=800" alt="{{ featured.title }}" style="height:100%; object-fit:cover; aspect-ratio:auto;">
+      <div class="deal-body" style="padding:28px;">
+        <span class="mag-tag {{ featured.tagClass }}">{{ featured.category }}</span>
+        <h3 style="font-size:1.4rem; margin:10px 0 10px;">{{ featured.title }}</h3>
+        <p class="deal-meta" style="margin-bottom:18px;">Written by {{ featured.author }} · {{ featured.read_time }} min read</p>
+        <p style="color:var(--ink-soft); font-size:0.95rem;">{{ featured.excerpt }}</p>
+      </div>
+    </article>
+  </a>
+  {% endif %}
+
+  <div class="section-head">
+    <div>
+      <h2>Latest from the Magazine</h2>
+      <p>New guides and tips, published weekly.</p>
+    </div>
+  </div>
+
+  <div class="deal-grid">
+    {% for article in magazineArticles %}
+      {% if article.slug != featured.slug %}{{ magazineCard(article) }}{% endif %}
+    {% endfor %}
+  </div>
+
+  <p style="max-width:var(--maxw); margin:32px auto 0; color:var(--ink-soft); font-size:0.85rem;">
+    New articles are added through the CMS at <code>/admin</code> — this page rebuilds automatically on every publish.
+  </p>
+</section>

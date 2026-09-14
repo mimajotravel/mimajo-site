@@ -1,12 +1,12 @@
 ---
 title: "Phuket: 3-Night Resort Escape"
-image: "/images/uploads/phuket-resort.jpg"
+image: "https://images.unsplash.com/photo-1528181304800-259b08848526"
 tag: "Limited Time"
 meta: "Patong · Ends in 48 hours"
 was_price: "$410"
 price: "$259"
 cta_link: "https://example-affiliate-link.com/phuket-resort"
-featured: false
+featured: true
 expires: 2026-09-03T00:00:00.000Z
 ---
 

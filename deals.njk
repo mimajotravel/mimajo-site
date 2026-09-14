@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+title: "All Deals"
+description: "Every travel deal on Mimajo, checked by our team within the last 48 hours."
+---
+{% from "partials/macros.njk" import dealCard %}
+
+<section class="section" style="padding-top:48px">
+  <div class="section-head">
+    <div>
+      <h2 style="color:var(--mi)">All Deals</h2>
+      <p>Every deal below is checked by our team within the last 48 hours.</p>
+    </div>
+  </div>
+
+  <div class="deal-grid" id="deal-grid">
+    {% for deal in deals %}
+      {{ dealCard(deal) }}
+    {% endfor %}
+
+    <a href="/flash.html" class="deal-card" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:32px 24px; background:var(--ocean-grad); border:none;">
+      <div style="font-size:2rem; margin-bottom:8px;">⚡</div>
+      <h3 style="color:#fff; margin-bottom:6px;">This Week's Flash Picks</h3>
+      <p style="color:#DFF5F4; font-size:0.9rem; margin-bottom:0;">Bigger discounts, member-only pricing — refreshed weekly.</p>
+    </a>
+  </div>
+
+  <p style="max-width:var(--maxw); margin:32px auto 0; color:var(--ink-soft); font-size:0.85rem;">
+    New deals are added through the CMS at <code>/admin</code> — this page rebuilds automatically on every publish.
+  </p>
+</section>

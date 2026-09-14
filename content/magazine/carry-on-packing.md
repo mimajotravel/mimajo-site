@@ -1,6 +1,6 @@
 ---
 title: "The Carry-On-Only Packing List We Use for Every Trip Under 10 Days"
-image: "/images/uploads/carry-on-packing.jpg"
+image: "https://images.unsplash.com/photo-1553603227-2358aabe821e"
 category: "Packing"
 excerpt: "One list, reused on every short trip — built to dodge checked-bag fees without leaving anything behind."
 author: "The Mimajo Team"

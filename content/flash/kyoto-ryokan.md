@@ -1,6 +1,6 @@
 ---
 title: "Kyoto: 4-Night Ryokan + Rail Pass"
-image: "/images/uploads/kyoto-flash.jpg"
+image: "https://images.unsplash.com/photo-1478436127897-769e1b3f0f36"
 meta: "Traditional ryokan · Breakfast & dinner included"
 was_price: "$1,980"
 price: "$1,340"

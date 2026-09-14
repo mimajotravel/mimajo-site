@@ -1,6 +1,6 @@
 ---
 title: "Kuala Lumpur: Weekend City Break"
-image: "/images/uploads/kl-weekend.jpg"
+image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a"
 tag: "Package"
 meta: "Bukit Bintang · 3D2N incl. breakfast"
 was_price: "$320"

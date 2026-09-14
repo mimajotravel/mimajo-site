@@ -1,6 +1,6 @@
 ---
 title: "Maldives: 3-Night Overwater Villa"
-image: "/images/uploads/maldives-flash.jpg"
+image: "https://images.unsplash.com/photo-1573843981267-be1999ff37cd"
 meta: "All-inclusive · Voyager tier price"
 was_price: "$2,400"
 price: "$1,690"
