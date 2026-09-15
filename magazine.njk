@@ -2,6 +2,7 @@
 layout: layouts/base.njk
 title: "Magazine"
 description: "Destination guides, budget tips and packing hacks from the Mimajo team."
+permalink: "/magazine.html"
 ---
 {% from "partials/macros.njk" import magazineCard %}
 {% set featuredArticles = magazineArticles | selectattr("featured") | list %}
