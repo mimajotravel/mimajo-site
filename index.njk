@@ -1,15 +1,16 @@
 ---
 layout: layouts/base.njk
-title: "Mimajo — Asia's Best Travel Deals, Verified Daily"
-description: "Hand-checked flight, hotel and package deals across Asia. New drops every morning."
+title: "Mimajo — Asia's Best Travel Deals, Verified Weekly"
+description: "Hand-checked flight, hotel and package deals across Asia. New drops every week."
+permalink: "/index.html"
 ---
 {% from "partials/macros.njk" import dealCard, magazineCard %}
 
 <section class="hero">
   <div class="hero-inner">
-    <span class="hero-eyebrow">New deals every morning, Singapore time</span>
+    <span class="hero-eyebrow">New deals every week, Singapore time</span>
     <h1>Asia's best travel deals, checked by a human before sunrise</h1>
-    <p>Flights, hotels and getaway packages — vetted daily so you never overpay for a trip again.</p>
+    <p>Flights, hotels and getaway packages — vetted weekly so you never overpay for a trip again.</p>
     <form class="hero-search" action="/deals.html" method="get">
       <input type="text" name="q" placeholder="Try 'Bali under $400' or 'Tokyo hotel deal'">
       <button type="submit">Find a Deal</button>
@@ -34,7 +35,7 @@ description: "Hand-checked flight, hotel and package deals across Asia. New drop
   <div class="section-head">
     <div>
       <h2>Today's top picks</h2>
-      <p>Refreshed daily — grab them before they're gone.</p>
+      <p>Refreshed weekly — grab them before they're gone.</p>
     </div>
     <a href="/deals.html" class="pill-link">See all deals →</a>
   </div>
