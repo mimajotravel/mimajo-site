@@ -11,14 +11,7 @@ permalink: "/enquiry.html"
     <p>Destination, dates, budget — we'll hunt down a deal and email it to you.</p>
   </div>
 
-  <!--
-    Netlify-style form handling shown here for zero-cost form capture.
-    If hosting on Vercel instead, swap this for a simple fetch() to
-    Formspree, Getform, or a Vercel serverless function — see the
-    founder roadmap doc for setup steps.
-  -->
-  <form class="form-card" name="enquiry" method="POST" data-netlify="true">
-    <input type="hidden" name="form-name" value="enquiry">
+  <form class="form-card" action="https://formspree.io/f/xoeqgbnz" method="POST">
     <div class="form-row">
       <label for="name">Full name</label>
       <input type="text" id="name" name="name" required>

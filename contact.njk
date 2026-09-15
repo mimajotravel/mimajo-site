@@ -1,0 +1,39 @@
+---
+layout: layouts/base.njk
+title: "Contact"
+description: "Get in touch with the Mimajo team — partnerships, press, feedback, or anything else."
+permalink: "/contact.html"
+---
+
+<section class="section" style="padding-top:48px">
+  <div class="section-head" style="justify-content:center; text-align:center; flex-direction:column; align-items:center;">
+    <h2 style="color:var(--mi)">Get in touch</h2>
+    <p>Partnerships, press, feedback, or anything that doesn't fit our <a href="/enquiry.html">deal request form</a>.</p>
+  </div>
+
+  <div class="form-card" style="text-align:center; margin-bottom:24px; padding:20px 32px;">
+    <p style="margin:0; font-size:0.95rem;">Prefer email? Reach us directly at
+      <a href="mailto:hello@mimajo.co" style="color:var(--jo-deep); font-weight:700;">hello@mimajo.co</a>
+    </p>
+  </div>
+
+  <form class="form-card" action="https://formspree.io/f/mzebnwao" method="POST">
+    <div class="form-row">
+      <label for="name">Full name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-row">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-row">
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" placeholder="e.g. Partnership enquiry, Press, Feedback">
+    </div>
+    <div class="form-row">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn-submit">Send Message</button>
+  </form>
+</section>
