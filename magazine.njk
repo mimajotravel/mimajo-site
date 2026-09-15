@@ -49,8 +49,4 @@ permalink: "/magazine.html"
       {% if article.slug != featured.slug %}{{ magazineCard(article) }}{% endif %}
     {% endfor %}
   </div>
-
-  <p style="max-width:var(--maxw); margin:32px auto 0; color:var(--ink-soft); font-size:0.85rem;">
-    New articles are added through the CMS at <code>/admin</code> — this page rebuilds automatically on every publish.
-  </p>
 </section>
