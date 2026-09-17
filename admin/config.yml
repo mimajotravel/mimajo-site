@@ -48,7 +48,7 @@ collections:
       - label: "Category Tag"
         name: "tag"
         widget: "select"
-        options: ["Hotel", "Flight", "Flight + Hotel", "Package", "Flash Sale", "Members Only"]
+        options: ["Hotel", "Flight", "Flight + Hotel", "Package", "Limited Time"]
       - { label: "Location line", name: "meta", widget: "string", hint: "e.g. Uluwatu · Includes airport transfer" }
       - { label: "Original Price", name: "was_price", widget: "string" }
       - { label: "Deal Price", name: "price", widget: "string" }
@@ -56,25 +56,6 @@ collections:
       - { label: "Featured on homepage?", name: "featured", widget: "boolean", default: false }
       - { label: "Expiry Date", name: "expires", widget: "datetime", required: false }
       - { label: "Full Details", name: "body", widget: "markdown" }
-
-  - name: "magazine"
-    label: "Magazine"
-    folder: "content/magazine"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Article Title", name: "title", widget: "string" }
-      - { label: "Cover Photo", name: "image", widget: "image" }
-      - label: "Category"
-        name: "category"
-        widget: "select"
-        options: ["Destination Guide", "Budget Tips", "Travel Hacks", "Packing"]
-      - { label: "Excerpt", name: "excerpt", widget: "text", hint: "1-2 sentences shown on the Magazine listing page" }
-      - { label: "Author", name: "author", widget: "string", default: "The Mimajo Team" }
-      - { label: "Read Time (minutes)", name: "read_time", widget: "number", value_type: "int", min: 1, max: 30 }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Feature on homepage & Magazine top?", name: "featured", widget: "boolean", default: false }
-      - { label: "Article Body", name: "body", widget: "markdown" }
 
   - name: "flash"
     label: "Flash (Weekly Picks)"
@@ -95,12 +76,38 @@ collections:
       - { label: "Week Of", name: "week_of", widget: "datetime", hint: "The Monday this pick goes live" }
       - { label: "Full Details", name: "body", widget: "markdown", required: false }
 
+  - name: "magazine"
+    label: "Magazine"
+    folder: "content/magazine"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Article Title", name: "title", widget: "string" }
+      - { label: "Cover Photo", name: "image", widget: "image" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["Destination Guide", "Budget Tips", "Travel Hacks", "Packing"]
+      - { label: "Excerpt", name: "excerpt", widget: "text", hint: "1-2 sentences shown on the Magazine listing page" }
+      - { label: "Author", name: "author", widget: "string", default: "The Mimajo Team" }
+      - { label: "Read Time (minutes)", name: "read_time", widget: "number", value_type: "int", min: 1, max: 30 }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Feature on homepage & Magazine top?", name: "featured", widget: "boolean", default: false }
+      - { label: "Article Body", name: "body", widget: "markdown" }
+
   - name: "pages"
     label: "Pages"
     files:
-      - label: "Membership Page Copy"
+      - label: "Membership Page Intro"
         name: "membership"
         file: "content/pages/membership.md"
         fields:
           - { label: "Intro Heading", name: "heading", widget: "string" }
           - { label: "Intro Text", name: "intro", widget: "text" }
+      - label: "About Us Page"
+        name: "about"
+        file: "content/pages/about.md"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string", default: "About Mimajo" }
+          - { label: "Tagline (shown under the title)", name: "tagline", widget: "string" }
+          - { label: "Page Content", name: "body", widget: "markdown", hint: "Use ## for section headings, same as the rest of this page." }
