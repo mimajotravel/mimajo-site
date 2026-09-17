@@ -15,6 +15,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ title }} — Mimajo</title>
 <meta name="description" content="{{ description or "Hand-checked flight, hotel and package deals across Asia. New drops every morning." }}">
+<link rel="canonical" href="https://mimajo.co{% if page.url == "/index.html" %}/{% else %}{{ page.url }}{% endif %}">
+
+<!-- Open Graph / social sharing -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mimajo">
+<meta property="og:title" content="{{ title }} — Mimajo">
+<meta property="og:description" content="{{ description or "Hand-checked flight, hotel and package deals across Asia. New drops every morning." }}">
+<meta property="og:url" content="https://mimajo.co{% if page.url == "/index.html" %}/{% else %}{{ page.url }}{% endif %}">
+<meta property="og:image" content="https://mimajo.co/images/brand/cover-banner-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title }} — Mimajo">
+<meta name="twitter:description" content="{{ description or "Hand-checked flight, hotel and package deals across Asia. New drops every morning." }}">
+<meta name="twitter:image" content="https://mimajo.co/images/brand/cover-banner-1200x630.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" href="/favicon.ico" sizes="any">
