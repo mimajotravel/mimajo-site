@@ -5,8 +5,15 @@ eleventyExcludeFromCollections: true
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {%- for page in collections.all %}
+  {%- if "/magazine-" not in page.url %}
   <url>
     <loc>https://mimajo.co{% if page.url == "/index.html" %}/{% else %}{{ page.url }}{% endif %}</loc>
+  </url>
+  {%- endif %}
+{%- endfor %}
+{%- for article in magazineArticles %}
+  <url>
+    <loc>https://mimajo.co/magazine-{{ article.slug }}.html</loc>
   </url>
 {%- endfor %}
 </urlset>
