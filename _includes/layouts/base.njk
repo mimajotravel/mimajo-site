@@ -79,5 +79,17 @@
   <div class="footer-bottom">© 2026 Mimajo. Deal prices are indicative and subject to availability on the merchant's site.</div>
 </footer>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var toggle = document.querySelector('.nav-toggle');
+    var links = document.querySelector('.nav-links');
+    if (toggle && links) {
+      toggle.addEventListener('click', function () {
+        links.classList.toggle('is-open');
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
