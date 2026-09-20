@@ -534,3 +534,19 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+/* Mobile menu dropdown */
+.nav { position: relative; }
+.nav-links.is-open {
+  display: flex !important;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--sand);
+  padding: 20px 24px;
+  gap: 18px;
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 12px 24px -12px rgba(43,34,42,0.25);
+  z-index: 200;
+}
