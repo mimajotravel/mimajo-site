@@ -1,6 +1,6 @@
 ---
-title: "Terms of Use"
-tagline: "Last updated September 2026 — please read before using this site."
+title: Terms of Use
+tagline: Last updated September 2026.
 ---
 
 *This is a starting template, not a substitute for legal advice. Have these terms reviewed by a qualified lawyer before relying on them for a live, revenue-generating business.*
