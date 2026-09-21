@@ -6,37 +6,10 @@ permalink: "/privacy.html"
 ---
 
 <article class="article-hero" style="padding-bottom:0;">
-  <h1 style="font-size:clamp(1.8rem, 4vw, 2.4rem); margin-top:20px;">Privacy Policy</h1>
-  <p class="article-meta">Last updated September 2026 — how we handle your data.</p>
+  <h1 style="font-size:clamp(1.8rem, 4vw, 2.4rem); margin-top:20px;">{{ privacyPage.title }}</h1>
+  <p class="article-meta">{{ privacyPage.tagline }}</p>
 </article>
 
 <div class="article-body">
-  <p><em>This is a starting template, not a substitute for legal advice. Have this policy reviewed by a qualified lawyer before relying on it for a live, revenue-generating business, particularly around Singapore's Personal Data Protection Act (PDPA) and any international visitors' rights (e.g. GDPR).</em></p>
-
-  <h2>1. What we collect</h2>
-  <p>We collect information you give us directly — such as your name and email when you join our mailing list, sign up for membership, or submit an enquiry — and information collected automatically, such as basic analytics (pages visited, general location, device type) via cookies or similar technologies.</p>
-
-  <h2>2. How we use it</h2>
-  <p>We use your information to send deal alerts you've signed up for, respond to enquiries, manage your membership, and understand how the Site is used so we can improve it. We do not sell your personal data to third parties.</p>
-
-  <h2>3. Affiliate links &amp; third-party tracking</h2>
-  <p>When you click an affiliate link on Mimajo, the third-party merchant or affiliate network may set its own cookies or tracking to attribute the booking to us. That tracking is governed by the third party's own privacy policy, not this one.</p>
-
-  <h2>4. Cookies</h2>
-  <p>We use cookies for basic site functionality and analytics. You can control or disable cookies through your browser settings; some features of the Site may not work as intended if you do.</p>
-
-  <h2>5. Data retention</h2>
-  <p>We retain your information for as long as needed to provide our services (e.g. while you're subscribed to deal alerts) or as required by law.</p>
-
-  <h2>6. Your rights</h2>
-  <p>You can ask to access, correct, or delete the personal data we hold about you at any time by contacting us via our <a href="/enquiry.html">enquiry form</a>. You can also unsubscribe from deal alerts at any time using the link in any email we send.</p>
-
-  <h2>7. Children's privacy</h2>
-  <p>Mimajo is not directed at children, and we do not knowingly collect personal data from anyone under 18.</p>
-
-  <h2>8. Changes to this policy</h2>
-  <p>We may update this Privacy Policy from time to time. Material changes will be reflected by an updated "last updated" date at the top of this page.</p>
-
-  <h2>9. Contact</h2>
-  <p>Questions about this policy or your data? Reach out via our <a href="/enquiry.html">enquiry form</a>.</p>
+{{ privacyPage.bodyHtml | safe }}
 </div>
