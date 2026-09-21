@@ -87,6 +87,6 @@ Mimajo is intended for a general audience and is not directed to individuals und
 
 We may update this Privacy Policy periodically to reflect changes in our legal obligations, technology, or business practices. The "Last updated" date at the top of this page indicates when the latest revisions took effect.
 
-## 9. Contact
+## 11. Contact
 
 If you have questions, concerns, or requests regarding this Privacy Policy or how your data is handled, please reach out via our [contact page](/contact.html).
