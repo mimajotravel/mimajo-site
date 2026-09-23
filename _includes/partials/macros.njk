@@ -1,4 +1,5 @@
 {% macro dealCard(deal) %}
+<a href="/deal-{{ deal.slug }}.html" style="text-decoration:none; color:inherit;">
 <article class="deal-card">
   <img src="{{ deal.image }}?w=500" alt="{{ deal.title }}">
   <div class="deal-body">
@@ -7,10 +8,11 @@
     <p class="deal-meta">{{ deal.meta }}</p>
     <div class="deal-price-row">
       <div class="deal-price"><span class="was">{{ deal.was_price }}</span>{{ deal.price }}</div>
-      <a href="{{ deal.cta_link }}" class="btn-book">Book Now</a>
+      <span class="btn-book">View Deal</span>
     </div>
   </div>
 </article>
+</a>
 {% endmacro %}
 
 {% macro magazineCard(article) %}
