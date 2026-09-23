@@ -1,6 +1,9 @@
 const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
+const MarkdownIt = require("markdown-it");
+
+const md = new MarkdownIt({ html: true });
 
 module.exports = () => {
   const dir = path.join(__dirname, "../content/deals");
@@ -23,7 +26,7 @@ module.exports = () => {
         cta_link: data.cta_link || "#",
         featured: !!data.featured,
         expires: data.expires || null,
-        body: (content || "").trim(),
+        bodyHtml: md.render(content || ""),
       };
     })
     .sort((a, b) => a.title.localeCompare(b.title));
